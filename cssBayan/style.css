@@ -117,3 +117,61 @@ body {
     height: 400px;
   }
 }
+
+@media (max-width: 820px) {
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px 20px;
+  }
+  .title {
+    margin-bottom: 25px;
+    font-size: 35px;
+  }
+  .meme {
+    margin-top: 15px;
+  }
+  .meme-title {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .check:checked ~ .box {
+    padding: 0;
+    height: 300px;
+  }
+  .box {
+    margin-top: 5px;
+  }
+  .pic {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px 15px;
+  }
+  .title {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  .meme {
+    margin-top: 5px;
+  }
+  .meme-title {
+    font-size: 18px;
+    line-height: 20px;
+    }
+  .check:checked ~ .box {
+    padding: 0;
+    height: 200px;
+  }
+  .box {
+    margin-top: 5px;
+  }
+  .pic {
+    height: 200px;
+  }
+}
