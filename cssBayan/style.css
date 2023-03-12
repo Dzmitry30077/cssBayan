@@ -1,1 +1,119 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+}
+html {
+  scrollbar-gutter: stable;
+}
+body {
+  background-color: antiquewhite;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+.meme {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.meme-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: self-start;
+  justify-content: space-between;
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 2px solid lightslategray;
+}
+
+@media (hover: hover) {
+  .meme:hover .box {
+    padding: 15px;
+    height: 600px;
+    transition: .5s;
+  }
+  .meme:hover .arrow {
+    transform: rotate(-135deg);
+    transition: 0.3s;
+  }
+}
+.check {
+  display: none;
+}
+.check:checked ~ .box {
+  padding: 5px;
+  height: 600px;
+  transition: .5s;
+}
+.check:checked + .meme-title .arrow {
+  transform: rotate(-135deg);
+  transition: 0.3s;
+}
+.box {
+  height: 0;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+.pic {
+  height: 600px;
+}
+
+@media (max-width: 1920px) {
+  .container {
+    margin: 20px auto;
+    padding: 30px 20px;
+  }
+  .title {
+    margin-bottom: 25px;
+    font-size: 42px;
+  }
+  .meme {
+    margin-top: 15px;
+  }
+  .meme-title {
+    font-size: 28px;
+    line-height: 30px;
+    border-bottom: 1px solid lightslategray;
+  }
+  .meme:hover .box {
+    padding: 10;
+    height: 400px;
+  }
+  .check:checked ~ .box {
+    padding: 10;
+    height: 400px;
+  }
+  .box {
+    margin-top: 15px;
+  }
+  .pic {
+    height: 400px;
+  }
+}
